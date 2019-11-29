@@ -1,3 +1,48 @@
-<div class="page">
-    <div class="title">Home</div>
+<div class="page page-home" id="page-home">
+    <div class="nav-bar nav-bar-home padding25" id="nav-bar-home">
+        <h1 class="title page-title" id="page-title">Home</h1>
+        <div class="fixed-part" id="fixed-part">
+            <div class="row input-row">
+                <input class="search-input text-input" id="search-input" placeholder="shops,products"/>
+                <img class="icon search-icon" src="../resource/search.svg"/>
+                <img class="icon qrcode-icon" src="../resource/qrcode.svg"/>
+            </div>
+            <div class="nav-tab" id="nav-tab">
+                <div class="tab-item active" id="tab-shop">
+                    Shop
+                </div>
+                <div class="tab-item" id="tab-event">
+                    Event
+                </div>
+                <div class="tab-item" id="tab-recommend">
+                    Recommend
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="home-content">
+        <div class="section section-shop padding25" id="section-shop">
+            <div class="section-header">
+                <h2>Shop</h2>
+                <div class="see-all-btn">see all</div>
+            </div>
+            <div class="section-content shop-list" id="shop-list">
+            </div>
+        </div>
+        <div class="section section-event padding25" id="section-event">
+            <div class="section-header">
+                <h2>Event</h2>
+                <div class="see-all-btn">see all</div>
+            </div>
+            <div class="section-content event-list" id="event-list">
+            </div>
+        </div>
+        <div class="section section-product padding25" id="section-product">
+            <div class="section-header">
+                <h2>Recommend</h2>
+            </div>
+            <div class="section-content event-list" id="product-list">
+            </div>
+        </div>
+    </div>
 </div>

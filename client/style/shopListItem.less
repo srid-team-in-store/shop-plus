@@ -1,0 +1,33 @@
+.shop-list-item{
+    display: flex;
+    margin-bottom: 20px;
+    .left{
+        margin-right: 16px;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .right{
+        flex-grow: 1;
+        .row{
+            display: flex;
+            margin-bottom: 4px;
+            align-items: center;
+            color: #999;
+            &.space-between{
+                justify-content: space-between;
+            }
+            .title{
+                color: black;
+            }
+            .rate-img{
+                margin-right: 12px;
+                height: 13px;
+            }
+            .score{
+                color: #F41C3B;
+            }
+        }
+    }
+}

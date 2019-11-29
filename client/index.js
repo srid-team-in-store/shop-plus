@@ -1,7 +1,8 @@
 import Navigo from "navigo";
+import "./style/index.less";
 import initRouter from "./js/lib/initRouter";
-import Home from "./view/Home.html";
 import Error from "./view/Error.html";
+import home from "./js/home";
 
 const app = document.getElementById("app");
 const router = new Navigo(null, true, "#");
@@ -9,7 +10,7 @@ initRouter();
 window.state = {};
 
 router.on("/", () => {
-    app.innerHTML = Home;
+    home.render();
 }).resolve();
 
 router.notFound(() => {
