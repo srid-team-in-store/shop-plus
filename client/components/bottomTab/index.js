@@ -2,17 +2,17 @@ import View from "./view.html";
 import "./style.less";
 
 const hashToTabItem = {
-    "#/chats": "tab-item-chats",
-    "#/directory": "tab-item-directory",
+    "#/": "tab-item-home",
+    "#/shops": "tab-item-shops",
     "#/me": "tab-item-me",
-    "#/announcements": "tab-item-announcement"
+    "#/cart": "tab-item-cart"
 };
 
 const tabItemToHash = {
-    "tab-item-chats": "#/chats",
-    "tab-item-directory": "#/directory",
+    "tab-item-home": "#/",
+    "tab-item-cart": "#/cart",
     "tab-item-me": "#/me",
-    "tab-item-announcement": "#/announcements"
+    "tab-item-shops": "#/shops"
 };
 
 const mountNode = () => {

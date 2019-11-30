@@ -3,11 +3,13 @@ import "./style/index.less";
 import initRouter from "./js/lib/initRouter";
 import Error from "./view/Error.html";
 import home from "./js/home";
+import BottomTab from "./components/bottomTab";
 
 const app = document.getElementById("app");
 const router = new Navigo(null, true, "#");
 initRouter();
 window.state = {};
+BottomTab.initBottomTab();
 
 router.on("/", () => {
     home.render();
