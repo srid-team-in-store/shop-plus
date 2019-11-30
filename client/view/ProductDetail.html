@@ -1,19 +1,48 @@
 <div class="page page-product-detail" id="page-product-detail">
-    <div class="common-nav">
-        <div class="back-btn-container">
-            <img src="../resource/back.svg"/>
+    <div class="common-nav padding25">
+        <div class="left">
+            <div class="back-btn-container" id="back-btn-container">
+                <img src="../resource/back.svg"/>
+            </div>
+            <h3 class="title" id="nav-title"></h3>
         </div>
-        <div class="title" id="nav-title"></div>
-        <div class="close-btn-container">
-            <img src="../resource/close.svg"/>
+        <div class="right">
+            <div class="close-btn-container">
+                <img src="../resource/close.svg"/>
+            </div>
         </div>
     </div>
-    <div class="section-basic">
+    <div class="section section-basic padding25">
         <div class="product-img-container" id="product-img-container"></div>
-        <div class="product-name" id="product-name"></div>
+        <h3 class="product-name" id="product-name"></h3>
         <div class="product-desc" id="product-desc"></div>
-        <div class="price" id="price"></div>
+        <h3 class="price" id="price"></h3>
         <div class="rate-row">
+            <img src="" class="rate-img" id="rate-img"/>
+            <div class="score" id="rate-score"></div>
+            <div class="rate-count" id="rate-count"></div>
+        </div>
+    </div>
+    <div class="wide-gray-split"></div>
+    <div class="section section-journey" id="section-journey">
+        <h2 class="section-title padding25">Product Journey</h2>
+        <div class="content">
+            <div class="img-container">
+                <img src="../resource/journey.svg"/>
+            </div>
+            <div class="invisible-video-entry" id="invisible-video-entry"></div>
+        </div>
+    </div>
+    <div class="wide-gray-split"></div>
+    <div class="section section-reviews">
+        <h2 class="section-title padding-left25">Reviews</h2>
+        <div class="content review-list" id="review-list">
+        </div>
+    </div>
+    <div class="wide-gray-split"></div>
+    <div class="section section-recommend padding25">
+        <h2 class="section-title">People Also Buy</h2>
+        <div class="content recommend-list product-list" id="recommend-list">
         </div>
     </div>
 </div>

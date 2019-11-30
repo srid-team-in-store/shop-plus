@@ -36,16 +36,17 @@ const buildSingleProductBlockItem = function (product) {
         row3.appendChild(originPrice);
     }
 
-    const row4 = createSingleElement("div","row shop-row");
-    const shopName = createSingleElement("div","shop-name");
-    shopName.innerText = product.shopName;
-    row4.appendChild(shopName);
-
     container.appendChild(imgContainer);
     container.appendChild(row1);
     container.appendChild(row2);
     container.appendChild(row3);
-    container.appendChild(row4);
+    if(product.shopName) {
+        const row4 = createSingleElement("div", "row shop-row");
+        const shopName = createSingleElement("div", "shop-name");
+        shopName.innerText = product.shopName;
+        row4.appendChild(shopName);
+        container.appendChild(row4);
+    }
     return container;
 };
 

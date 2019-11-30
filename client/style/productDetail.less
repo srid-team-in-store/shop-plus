@@ -1,0 +1,111 @@
+.page-product-detail {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    .common-nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        justify-content: space-between;
+        background-color: white;
+        padding-top: 24px;
+        padding-bottom: 12px;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 101;
+
+        .left {
+            display: flex;
+
+            .back-btn-container {
+                margin-right: 8px;
+            }
+
+            .title {
+                font-weight: 600;
+                max-width: 200px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap
+            }
+        }
+    }
+
+    .section {
+        padding-top: 25px;
+        padding-bottom: 40px;
+    }
+
+    .section-basic {
+        margin-top: 70px;
+
+        .product-img-container {
+            text-align: center;
+            margin-bottom: 20px;
+
+            img {
+                height: 320px;
+            }
+        }
+
+        .product-name {
+            margin-bottom: 12px;
+        }
+
+        .product-desc {
+            color: #999;
+            line-height: 20px;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            color: #F41C3B;
+            margin-bottom: 24px;
+        }
+
+        .rate-row {
+            display: flex;
+            color: #999999;
+            font-weight: 600;
+            align-items: center;
+
+            .rate-img {
+                margin-right: 12px;
+            }
+
+            .score {
+                margin-right: 12px;
+            }
+        }
+    }
+
+    .section-journey {
+        .content {
+            position: relative;
+            padding: 40px 0 40px 0;
+            overflow: hidden;
+
+            img {
+                position: relative;
+                left: 20px;
+            }
+
+            .invisible-video-entry {
+                width: 148px;
+                height: 90px;
+                border-radius: 8px;
+                position: absolute;
+                left: 216px;
+                top: 395px;
+                background-color: #F41C3B;
+                opacity: 0;
+            }
+        }
+    }
+
+    .section-recommend{
+        .section-title{
+            margin-bottom: 40px;
+        }
+    }
+}
