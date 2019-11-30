@@ -10,6 +10,20 @@ const shopList = require("./mockData/shopList");
 const eventList = require("./mockData/eventList");
 const recommendProductList = require("./mockData/productList");
 
+const navbarConfig = [{
+    id: "tab-shop",
+    text: "Shop",
+    sectionId: "section-shop"
+},{
+    id: "tab-event",
+    text: "Event",
+    sectionId: "section-event"
+},{
+    id: "tab-recommend",
+    text: "Recommend",
+    sectionId: "section-product"
+}];
+
 const swithNavBarFixed = function (fixed) {
     const pageTitle = document.getElementById("page-title");
     const navbar = document.getElementById("nav-bar-home");
@@ -25,23 +39,31 @@ const swithNavBarFixed = function (fixed) {
     }
 };
 
-const setNavbar = function () {
+const setNavBar = function (configList) {
     const pageHome = document.getElementById("page-home");
-    const tabShop = document.getElementById("tab-shop");
-    const tabEvent = document.getElementById("tab-event");
-    const tabRecommend = document.getElementById("tab-recommend");
-    const resetNavbar = function () {
-        tabShop.classList.remove("active");
-        tabRecommend.classList.remove("active");
-        tabEvent.classList.remove("active");
+    const resetNavBarStyle = function () {
+        for(const config of configList){
+            document.getElementById(config.id).classList.remove("active");
+        }
     };
-    resetNavbar();
-    if(pageHome.scrollTop <= 640) {
-        tabShop.classList.add("active");
-    } else if(pageHome.scrollTop > 640 && pageHome.scrollTop <= 1220){
-        tabEvent.classList.add("active");
-    } else {
-        tabRecommend.classList.add("active");
+    pageHome.addEventListener("scroll",() => {
+        resetNavBarStyle();
+        for(let i = 0; i < configList.length; i++){
+            const sectionOffsetTop = document.getElementById(configList[i].sectionId).offsetTop;
+            if(pageHome.scrollTop < sectionOffsetTop + 200){
+                document.getElementById(configList[i].id).classList.add("active");
+                break;
+            }
+            if(i === configList.length - 1){
+                document.getElementById(configList[i].id).classList.add("active");
+            }
+        }
+    });
+    for(const config of configList){
+        document.getElementById(config.id).addEventListener("click", () => {
+            const sectionOffsetTop = document.getElementById(config.sectionId).offsetTop;
+            pageHome.scrollTop = sectionOffsetTop - 180 > 0 ? sectionOffsetTop - 180 : 0;
+        });
     }
 };
 
@@ -53,22 +75,8 @@ const addScrollEventListener = function () {
         } else {
             swithNavBarFixed(false);
         }
-        setNavbar();
     }, 1);
     pageHome.addEventListener("scroll", handleScroll);
-};
-
-const addNavTabEventListener = function () {
-    const pageHome = document.getElementById("page-home");
-    document.getElementById("tab-shop").addEventListener("click", () => {
-        pageHome.scrollTop = 0;
-    });
-    document.getElementById("tab-event").addEventListener("click", () => {
-        pageHome.scrollTop = 660;
-    });
-    document.getElementById("tab-recommend").addEventListener("click", () => {
-        pageHome.scrollTop = 1240;
-    });
 };
 
 const render = function () {
@@ -78,7 +86,7 @@ const render = function () {
     renderEventList(document.getElementById("event-list"), eventList);
     renderProductBlockItemList(document.getElementById("product-list"), recommendProductList);
     addScrollEventListener();
-    addNavTabEventListener();
+    setNavBar(navbarConfig);
 };
 
 const home = {

@@ -33,7 +33,7 @@ module.exports = [{
     originPrice: null,
     shopName: "Costco",
     img: "https://i.imgur.com/t66130U.png",
-    id: 10003
+    id: 10004
 }, {
     name: "fairlife Chocolate, 2% reduced fat milk",
     score: 4.9,
@@ -69,5 +69,5 @@ module.exports = [{
     originPrice: null,
     shopName: "Costco",
     img: "https://i.imgur.com/t66130U.png",
-    id: 10003
+    id: 10004
 }];

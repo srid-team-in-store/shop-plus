@@ -3,6 +3,11 @@ import "../../style/productBlockItem.less";
 
 const buildSingleProductBlockItem = function (product) {
     const container = createSingleElement("div", "product-block-item");
+    if(product.id) {
+        container.addEventListener("click", () => {
+            window.location.hash = `/product/${product.id}`;
+        });
+    }
     const imgContainer = createSingleElement("div", "img-container");
     const img = createSingleElement("img", "product-img");
     img.src = product.img;
