@@ -1,5 +1,5 @@
-import Map from "../view/Map.html";
-import "../style/map.less";
+import Map from "../view/Navigation.html";
+import "../style/navigation.less";
 
 const render = function () {
     const app = document.getElementById("app");
@@ -28,7 +28,12 @@ const render = function () {
     });
 
     document.getElementById("map-back").addEventListener("click", () => {
-        window.history.go(-1);
+        const shopId = location.hash.split("=")[1];
+        window.location.hash = "/shop/" + shopId;
+    });
+
+    document.getElementById("map-close").addEventListener("click", () => {
+        window.location.hash = "/";
     });
 
     document.getElementById("start-navigation").addEventListener("click", () => {
@@ -39,8 +44,8 @@ const render = function () {
     });
 };
 
-const map = {
+const navigation = {
     render,
 };
 
-export default map;
+export default navigation;

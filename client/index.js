@@ -9,7 +9,7 @@ import productVideo from "./js/productVideo";
 import member from "./js/member";
 import shops from "./js/shops";
 import BottomTab from "./components/bottomTab";
-import map from "./js/map";
+import navigation from "./js/navigation";
 import ar from "./js/ar";
 import scanDetail from "./js/scanDetail";
 
@@ -43,8 +43,8 @@ router.on("/shops", () => {
     shops.render();
 });
 
-router.on("/map", () => {
-    map.render();
+router.on("/navigation", () => {
+    navigation.render();
 }).resolve();
 
 router.on("/ar", () => {
