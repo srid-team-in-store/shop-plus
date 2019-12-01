@@ -1,85 +1,36 @@
 .page-ar {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 
-  .content {
+    .ar-div {
+        height: 80%;
+        display: flex;
+        justify-content: center;
 
-  }
+        #ar-image {
+            height: 100%;
+        }
 
-  .first-row {
-    display: flex;
-    text-align: center;
-    margin-bottom: 20px;
-
-    #ar-back {
-      margin-left: 5%;
-      margin-top: 20px;
+        #ar-close {
+            margin-right: 20px;
+        }
     }
 
-    #ar-close {
-      margin-top: 20px;
-      margin-left: 90%;
+    .ar-bottom {
+        background-color: #ffffff;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        padding: 0 25px;
+        box-sizing: border-box;
+        #ar-container{
+            display: flex;
+            align-items: center;
+        }
     }
-  }
-
-
-  .ar-div {
-    text-align: center;
-    height: 80%;
-
-    #ar-image {
-      height: 100%;
-    }
-    #ar-next {
-      margin-bottom: 100px;
-      margin-left: 20px;
-      height: 30px;
-    }
-
-    #ar-close {
-      margin-right: 20px;
-    }
-  }
-
-  .ar-bottom {
-    background-color: #ffffff;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 20%;
-    text-align: center;
-  }
-
-  .ar-bottom a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    margin-left: 45%;
-    padding: 14px 16px;
-    font-size: 17px;
-  }
-
-  .ar-bottom a:hover {
-    border-bottom: 3px solid white;
-  }
-
-  #ar-container {
-    margin-top: 1px;
-
-    #ar-category {
-      margin-top: 10px;
-      vertical-align: middle;
-    }
-
-    #ar-text {
-      margin-left: 30px;
-    }
-
-    #ar-turn-div {
-      margin-left: 20px;
-      vertical-align: middle;
-    }
-  }
 }

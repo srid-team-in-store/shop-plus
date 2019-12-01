@@ -26,7 +26,7 @@ const mountNode = () => {
 
 const updateBottomTab = () => {
     const mountDom = document.getElementById("bottom-tab-node");
-    if(hashToTabItem[window.location.hash] || window.location.hash.indexOf("shop") > -1) {
+    if(hashToTabItem[window.location.hash] || window.location.hash.split("?")[0].indexOf("shop") > -1) {
         mountDom.style.visibility = "visible";
         for(const domId of Object.keys(tabItemToHash)) {
             document.getElementById(domId).classList.remove("current");

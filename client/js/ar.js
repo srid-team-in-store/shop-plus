@@ -34,7 +34,7 @@ const render = function () {
     });
 
     let cnt = 1;
-    document.getElementById("ar-next").addEventListener("click", () => {
+    document.getElementById("ar-container").addEventListener("click", () => {
         if(cnt === 1) {
             document.getElementById("ar-image").src = "https://i.imgur.com/w7pPAAn.png";
             document.getElementById("ar-turn").src = "https://i.imgur.com/2UshUA6.png";
@@ -60,8 +60,9 @@ const render = function () {
                 document.getElementById("ar-image").src = "https://i.imgur.com/OpMW0Bj.png";
                 break;
             default:
+                break;
             }
-            document.getElementById("ar-next").style.visibility = "hidden";
+            // document.getElementById("ar-next").style.visibility = "hidden";
         }
     });
 };
