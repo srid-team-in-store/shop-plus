@@ -29,6 +29,10 @@ const render = function () {
         window.history.go(-1);
     });
 
+    document.getElementById("ar-close").addEventListener("click", () => {
+        window.location.hash = "/navigation";
+    });
+
     let cnt = 1;
     document.getElementById("ar-next").addEventListener("click", () => {
         if(cnt === 1) {

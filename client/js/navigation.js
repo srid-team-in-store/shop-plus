@@ -28,7 +28,12 @@ const render = function () {
     });
 
     document.getElementById("map-back").addEventListener("click", () => {
-        window.history.go(-1);
+        const shopId = location.hash.split("=")[1];
+        window.location.hash = "/shop/" + shopId;
+    });
+
+    document.getElementById("map-close").addEventListener("click", () => {
+        window.location.hash = "/";
     });
 
     document.getElementById("start-navigation").addEventListener("click", () => {
