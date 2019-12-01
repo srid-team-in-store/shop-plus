@@ -15,6 +15,9 @@ app.use(cors({
 }));
 app.use("/app", express.static(path.resolve(__dirname, "../dist")));
 
+app.use("/style-guide", express.static(path.resolve(__dirname, "../StyleGuide")));
+
+
 app.get("/heartbeat", async (req, res, next) => {
     res.status(200).json({
         success: true,
