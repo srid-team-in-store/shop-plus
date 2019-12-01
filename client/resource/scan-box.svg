@@ -1,0 +1,10 @@
+<svg width="237px" height="175px" viewBox="0 0 237 175" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Scan-code-to-view-product-detail" transform="translate(-69.000000, -309.000000)" stroke="#FFFFFF" stroke-width="4">
+            <polyline id="Path-8" points="90.1537344 311 71 311 71 396.532227"></polyline>
+            <polyline id="Path-8" transform="translate(80.576867, 438.766114) scale(1, -1) translate(-80.576867, -438.766114) " points="90.1537344 396 71 396 71 481.532227"></polyline>
+            <polyline id="Path-8" transform="translate(294.423133, 353.766114) scale(-1, 1) translate(-294.423133, -353.766114) " points="304 311 284.846266 311 284.846266 396.532227"></polyline>
+            <polyline id="Path-8" transform="translate(294.423133, 438.766114) scale(-1, -1) translate(-294.423133, -438.766114) " points="304 396 284.846266 396 284.846266 481.532227"></polyline>
+        </g>
+    </g>
+</svg>
