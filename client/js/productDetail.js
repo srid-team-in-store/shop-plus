@@ -20,6 +20,9 @@ const renderCommonNav = function (detail) {
     document.getElementById("back-btn-container").addEventListener("click",() => {
         window.history.go(-1);
     });
+    document.getElementById("close-btn-container").addEventListener("click",() => {
+        window.location.hash = "/";
+    });
     document.getElementById("nav-title").innerText = detail.name;
 };
 
