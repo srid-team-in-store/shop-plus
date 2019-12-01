@@ -46,6 +46,11 @@ const buildRight = function (shop) {
 
 const buildSingleShopItem = function (shop) {
     const container = createSingleElement("div","shop-list-item");
+    if(shop.id) {
+        container.addEventListener("click", () => {
+            window.location.hash = `/shop/${shop.id}`;
+        });
+    }
     const left = buildLeft(shop);
     const right = buildRight(shop);
     container.appendChild(left);

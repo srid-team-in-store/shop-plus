@@ -22,7 +22,7 @@ module.exports = [{
     groupId: 2
 },{
     imgSrc: "https://i.imgur.com/s3OnbvI.jpg",
-    name: "Marshall",
+    name: "Marshalls",
     score: 4.8,
     rateImg: "https://i.imgur.com/28VnoAH.png",
     time: "9:00 am - 9:00 pm",

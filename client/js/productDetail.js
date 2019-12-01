@@ -57,16 +57,18 @@ const renderRecommend = function (detail) {
 };
 
 const render = function () {
-    const app = document.getElementById("app");
-    app.innerHTML = ProductDetail;
     const productDetail = getData();
-    const pageProductDetail = document.getElementById("page-product-detail");
-    pageProductDetail.scrollTop = 0;
-    renderCommonNav(productDetail);
-    renderBasicSection(productDetail);
-    renderJourneySection(productDetail);
-    renderReviews(productDetail);
-    renderRecommend(productDetail);
+    const app = document.getElementById("app");
+    if(productDetail) {
+        app.innerHTML = ProductDetail;
+        const pageProductDetail = document.getElementById("page-product-detail");
+        pageProductDetail.scrollTop = 0;
+        renderCommonNav(productDetail);
+        renderBasicSection(productDetail);
+        renderJourneySection(productDetail);
+        renderReviews(productDetail);
+        renderRecommend(productDetail);
+    }
 };
 
 const productDetail = {

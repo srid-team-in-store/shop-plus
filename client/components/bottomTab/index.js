@@ -26,12 +26,15 @@ const mountNode = () => {
 
 const updateBottomTab = () => {
     const mountDom = document.getElementById("bottom-tab-node");
-    if(hashToTabItem[window.location.hash]) {
+    if(hashToTabItem[window.location.hash] || window.location.hash.indexOf("shop") > -1) {
         mountDom.style.visibility = "visible";
         for(const domId of Object.keys(tabItemToHash)) {
             document.getElementById(domId).classList.remove("current");
         }
-        document.getElementById(hashToTabItem[window.location.hash]).classList.add("current");
+        const curNode = document.getElementById(hashToTabItem[window.location.hash]);
+        if(curNode){
+            curNode.classList.add("current");
+        }
     } else {
         mountDom.style.visibility = "hidden";
     }
