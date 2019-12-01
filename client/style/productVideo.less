@@ -1,0 +1,47 @@
+.page-product-video {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  .section {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  .section-basic {
+    margin-top: 70px;
+
+    .video-name {
+      margin-bottom: 12px;
+    }
+
+    .video-location {
+      color: #999;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    .section {
+      margin-bottom: 0px;
+      .video-img-container {
+        position: relative;
+        text-align: center;
+        margin-top: 20px;
+
+        .video-img {
+          width: 360px;
+          filter: blur(2px);
+        }
+        .play-button {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 80px;
+        }
+      }
+    }
+  }
+}
