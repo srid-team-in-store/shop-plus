@@ -9,6 +9,8 @@ import productVideo from  "./js/productVideo";
 import member from "./js/member";
 import shops from "./js/shops";
 import BottomTab from "./components/bottomTab";
+import map from "./js/map";
+import ar from "./js/ar";
 
 const app = document.getElementById("app");
 const router = new Navigo(null, true, "#");
@@ -39,6 +41,14 @@ router.on("/me", () => {
 router.on("/shops", () => {
     shops.render();
 });
+
+router.on("/map", () => {
+    map.render();
+}).resolve();
+
+router.on("/ar", () => {
+    ar.render();
+}).resolve();
 
 router.notFound(() => {
     app.innerHTML = Error;
