@@ -1,4 +1,4 @@
-import AR from "../view/AR.html";
+import AR from "../view/Ar.html";
 import "../style/ar.less";
 
 const render = function () {

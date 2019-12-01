@@ -52,6 +52,9 @@ const render = function () {
     renderBasicList(document.getElementById("category"), data.categories);
     renderMapSection(data);
     renderRecommend(data);
+    document.getElementById("map-container").addEventListener("click", () => {
+        window.location.hash = "/navigation";
+    });
 };
 
 const shopDetail = {

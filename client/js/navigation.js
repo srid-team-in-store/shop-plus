@@ -1,5 +1,5 @@
-import Map from "../view/Map.html";
-import "../style/map.less";
+import Map from "../view/Navigation.html";
+import "../style/navigation.less";
 
 const render = function () {
     const app = document.getElementById("app");
@@ -39,8 +39,8 @@ const render = function () {
     });
 };
 
-const map = {
+const navigation = {
     render,
 };
 
-export default map;
+export default navigation;
