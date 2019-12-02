@@ -12,6 +12,7 @@ import BottomTab from "./components/bottomTab";
 import navigation from "./js/navigation";
 import ar from "./js/ar";
 import scanDetail from "./js/scanDetail";
+import cart from "./js/cart";
 
 const app = document.getElementById("app");
 const router = new Navigo(null, true, "#");
@@ -53,6 +54,10 @@ router.on("/ar", () => {
 
 router.on("/scan_detail", () => {
     scanDetail.render();
+}).resolve();
+
+router.on("/cart", () => {
+    cart.render();
 }).resolve();
 
 router.notFound(() => {
