@@ -23,7 +23,10 @@ const buildEventList = function (eventList) {
     return eventList.map((item) => buildSingleEventItem(item));
 };
 
-const renderEventList = function (dom, eventList) {
+const renderEventList = function (dom, eventList, replace) {
+    if(replace) {
+        dom.innerHTML = "";
+    }
     for(const item of buildEventList(eventList)) {
         dom.appendChild(item);
     }

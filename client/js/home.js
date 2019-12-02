@@ -85,6 +85,22 @@ const addQRcodeListener = () => {
     });
 };
 
+const updateData = () => {
+    const _shopList = require("./mockData/shopList");
+    const _eventList = require("./mockData/eventList");
+    const _recommendProductList = require("./mockData/productList");
+    const inputVal = document.getElementById("search-input").value;
+    const shopList = _shopList.filter(item => item.name.toLowerCase().includes(inputVal.toLowerCase()));
+    const eventList = _eventList.filter(item => item.name.toLowerCase().includes(inputVal.toLowerCase()));
+    const recommendProductList = _recommendProductList.filter(item => item.name.toLowerCase().includes(inputVal.toLowerCase()));
+    renderShopList(document.getElementById("shop-list"), shopList, true);
+    renderEventList(document.getElementById("event-list"), eventList, true);
+    renderProductBlockItemList(document.getElementById("product-list"), recommendProductList, true);
+};
+const addSearchListener = () => {
+    document.getElementById("search-icon").addEventListener("click", updateData);
+    document.getElementById("search-input").addEventListener("input", updateData);
+};
 const render = function () {
     const app = document.getElementById("app");
     app.innerHTML = Home;
@@ -94,6 +110,7 @@ const render = function () {
     addScrollEventListener();
     setNavBar(navbarConfig);
     addQRcodeListener();
+    addSearchListener();
 };
 
 const home = {
