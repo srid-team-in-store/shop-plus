@@ -21,6 +21,9 @@ const renderCommonNav = function (detail) {
         window.history.go(-1);
     });
     document.getElementById("nav-title").innerText = detail.name;
+    document.getElementById("qrcode-icon").addEventListener("click", () => {
+        window.location.href = "#/scan_detail";
+    });
 };
 
 const renderBasicSection = function (detail) {

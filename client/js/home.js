@@ -14,11 +14,11 @@ const navbarConfig = [{
     id: "tab-shop",
     text: "Shop",
     sectionId: "section-shop"
-},{
+}, {
     id: "tab-event",
     text: "Event",
     sectionId: "section-event"
-},{
+}, {
     id: "tab-recommend",
     text: "Recommend",
     sectionId: "section-product"
@@ -42,24 +42,24 @@ const swithNavBarFixed = function (fixed) {
 const setNavBar = function (configList) {
     const pageHome = document.getElementById("page-home");
     const resetNavBarStyle = function () {
-        for(const config of configList){
+        for(const config of configList) {
             document.getElementById(config.id).classList.remove("active");
         }
     };
-    pageHome.addEventListener("scroll",() => {
+    pageHome.addEventListener("scroll", () => {
         resetNavBarStyle();
-        for(let i = 0; i < configList.length; i++){
+        for(let i = 0; i < configList.length; i++) {
             const sectionOffsetTop = document.getElementById(configList[i].sectionId).offsetTop;
-            if(pageHome.scrollTop < sectionOffsetTop + 200){
+            if(pageHome.scrollTop < sectionOffsetTop + 200) {
                 document.getElementById(configList[i].id).classList.add("active");
                 break;
             }
-            if(i === configList.length - 1){
+            if(i === configList.length - 1) {
                 document.getElementById(configList[i].id).classList.add("active");
             }
         }
     });
-    for(const config of configList){
+    for(const config of configList) {
         document.getElementById(config.id).addEventListener("click", () => {
             const sectionOffsetTop = document.getElementById(config.sectionId).offsetTop;
             pageHome.scrollTop = sectionOffsetTop - 180 > 0 ? sectionOffsetTop - 180 : 0;
@@ -79,6 +79,12 @@ const addScrollEventListener = function () {
     pageHome.addEventListener("scroll", handleScroll);
 };
 
+const addQRcodeListener = () => {
+    document.getElementById("qrcode-icon").addEventListener("click", () => {
+        window.location.href = "#/scan_detail";
+    });
+};
+
 const render = function () {
     const app = document.getElementById("app");
     app.innerHTML = Home;
@@ -87,6 +93,7 @@ const render = function () {
     renderProductBlockItemList(document.getElementById("product-list"), recommendProductList);
     addScrollEventListener();
     setNavBar(navbarConfig);
+    addQRcodeListener();
 };
 
 const home = {
