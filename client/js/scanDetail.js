@@ -14,7 +14,7 @@ const render = function () {
     renderCommonNav();
     setTimeout(() => {
         window.location.replace("#/product/1000" + Math.ceil(Math.random() * 4));
-    }, 2000);
+    }, 3000);
 };
 
 const scanDetail = {
