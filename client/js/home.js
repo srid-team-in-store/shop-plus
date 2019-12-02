@@ -62,7 +62,7 @@ const setNavBar = function (configList) {
     for(const config of configList) {
         document.getElementById(config.id).addEventListener("click", () => {
             const sectionOffsetTop = document.getElementById(config.sectionId).offsetTop;
-            pageHome.scrollTop = sectionOffsetTop - 180 > 0 ? sectionOffsetTop - 180 : 0;
+            pageHome.scrollTop = Math.max(sectionOffsetTop - 180, 0);
         });
     }
 };
