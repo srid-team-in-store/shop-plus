@@ -13,7 +13,7 @@ const render = function () {
     app.innerHTML = ScanDetail;
     renderCommonNav();
     setTimeout(() => {
-        window.location.replace("#/product/10003");
+        window.location.replace("#/product/1000" + Math.ceil(Math.random() * 4));
     }, 2000);
 };
 
