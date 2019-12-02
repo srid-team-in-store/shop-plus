@@ -16,4 +16,5 @@
   * Hard-coded data:
     * Shop info
     * Product info
+    * Membership
     
