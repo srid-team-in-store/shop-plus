@@ -11,6 +11,7 @@ import shops from "./js/shops";
 import BottomTab from "./components/bottomTab";
 import navigation from "./js/navigation";
 import ar from "./js/ar";
+import cart from "./js/cart";
 import scanDetail from "./js/scanDetail";
 
 const app = document.getElementById("app");
@@ -49,6 +50,10 @@ router.on("/navigation", () => {
 
 router.on("/ar", () => {
     ar.render();
+}).resolve();
+
+router.on("/cart", () => {
+    cart.render();
 }).resolve();
 
 router.on("/scan_detail", () => {
