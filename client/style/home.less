@@ -1,6 +1,6 @@
 .page-home {
     height: 100vh;
-    overflow-y: scroll;
+    //overflow-y: scroll;
     scroll-behavior: smooth;
     .page-title {
         margin-bottom: 18px;
@@ -17,11 +17,15 @@
         padding-top: 30px;
         z-index: 101;
 
-        &.fixed {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
+        position: sticky;
+        top: 0;
+        left: 0;
+
+        //&.fixed {
+        //    position: fixed;
+        //    top: 0;
+        //    left: 0;
+        //}
 
         .input-row {
             display: flex;

@@ -54,7 +54,10 @@ const buildProductBlockItemList = function (productList) {
     return productList.map((item) => buildSingleProductBlockItem(item));
 };
 
-const renderProductBlockItemList = function (dom, productList) {
+const renderProductBlockItemList = function (dom, productList, replace) {
+    if(replace) {
+        dom.innerHTML = "";
+    }
     for(const productDom of buildProductBlockItemList(productList)) {
         dom.appendChild(productDom);
     }

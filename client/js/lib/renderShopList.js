@@ -2,7 +2,7 @@ import createSingleElement from "./createElement";
 import "../../style/shopListItem.less";
 
 const buildLeft = function (shop) {
-    const left = createSingleElement("div","left");
+    const left = createSingleElement("div", "left");
     const img = document.createElement("img");
     img.src = shop.imgSrc;
     left.appendChild(img);
@@ -10,7 +10,7 @@ const buildLeft = function (shop) {
 };
 
 const buildRight = function (shop) {
-    const right = createSingleElement("div","right");
+    const right = createSingleElement("div", "right");
     const row1 = createSingleElement("div", "row");
     const title = createSingleElement("h3", "title");
     title.innerText = shop.name;
@@ -45,7 +45,7 @@ const buildRight = function (shop) {
 };
 
 const buildSingleShopItem = function (shop) {
-    const container = createSingleElement("div","shop-list-item");
+    const container = createSingleElement("div", "shop-list-item");
     if(shop.id) {
         container.addEventListener("click", () => {
             window.location.hash = `/shop/${shop.id}`;
@@ -62,7 +62,10 @@ const buildShopList = function (shopList) {
     return shopList.map((item) => buildSingleShopItem(item));
 };
 
-const renderShopList = function (dom, shopList) {
+const renderShopList = function (dom, shopList, replace) {
+    if(replace) {
+        dom.innerHTML = "";
+    }
     for(const shopDom of buildShopList(shopList)) {
         dom.appendChild(shopDom);
     }
