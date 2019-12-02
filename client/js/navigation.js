@@ -7,6 +7,7 @@ const render = function () {
 
     document.getElementById("search-button").addEventListener("click", () => {
         const category = document.getElementById("category").value.toLowerCase();
+        document.getElementById("start-navigation-container").style.visibility = "visible";
         switch (category) {
         case "kitchen":
             document.getElementById("imgId").src = "https://i.imgur.com/WLWrezF.png";
