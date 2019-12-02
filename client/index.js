@@ -52,6 +52,10 @@ router.on("/ar", () => {
     ar.render();
 }).resolve();
 
+router.on("/cart", () => {
+    cart.render();
+}).resolve();
+
 router.on("/scan_detail", () => {
     scanDetail.render();
 }).resolve();

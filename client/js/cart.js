@@ -11,8 +11,8 @@ const render = function () {
     renderCartItemList(document.getElementById("cart-item-list"), cartItemList);
 };
 
-const shops = {
+const cart = {
     render,
 };
 
-export default shops;
+export default cart;
