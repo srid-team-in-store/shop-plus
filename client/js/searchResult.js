@@ -4,9 +4,8 @@ import {renderShopList} from "./lib/renderShopList";
 import {renderEventList} from "./lib/renderEventList";
 import {renderProductBlockItemList} from "./lib/renderProductBlockList";
 
-const render = function () {
-    const app = document.getElementById("app");
-    app.innerHTML = SearchResult;
+
+const renderSearchResult = function () {
     const _shopList = require("./mockData/shopList");
     const _eventList = require("./mockData/eventList");
     const _recommendProductList = require("./mockData/productList");
@@ -17,9 +16,19 @@ const render = function () {
     renderShopList(document.getElementById("shop-list"), shopList, true);
     renderEventList(document.getElementById("event-list"), eventList, true);
     renderProductBlockItemList(document.getElementById("product-list"), recommendProductList, true);
+};
+
+const renderCommonNav = function () {
     document.getElementById("back-btn-container").addEventListener("click", () => {
         window.history.go(-1);
     });
+};
+
+const render = function () {
+    const app = document.getElementById("app");
+    app.innerHTML = SearchResult;
+    renderSearchResult();
+    renderCommonNav();
 };
 
 const searchPage = {

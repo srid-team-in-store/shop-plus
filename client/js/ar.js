@@ -1,10 +1,7 @@
 import AR from "../view/Ar.html";
 import "../style/ar.less";
 
-const render = function () {
-    const app = document.getElementById("app");
-    app.innerHTML = AR;
-
+const renderCategory = function () {
     const category = location.hash.split("=")[1];
     switch (category) {
     case "kitchen":
@@ -24,16 +21,11 @@ const render = function () {
         break;
     default:
     }
+};
 
-    document.getElementById("ar-back").addEventListener("click", () => {
-        window.history.go(-1);
-    });
-
-    document.getElementById("ar-close").addEventListener("click", () => {
-        window.location.hash = "/navigation";
-    });
-
+const renderProductImages = function () {
     let cnt = 1;
+    const category = location.hash.split("=")[1];
     document.getElementById("ar-container").addEventListener("click", () => {
         if(cnt === 1) {
             document.getElementById("ar-image").src = "https://i.imgur.com/w7pPAAn.png";
@@ -65,6 +57,28 @@ const render = function () {
             // document.getElementById("ar-next").style.visibility = "hidden";
         }
     });
+};
+
+const goBack = function () {
+    document.getElementById("ar-back").addEventListener("click", () => {
+        window.history.go(-1);
+    });
+};
+
+const close = function () {
+    document.getElementById("ar-close").addEventListener("click", () => {
+        window.location.hash = "/navigation";
+    });
+};
+
+const render = function () {
+    const app = document.getElementById("app");
+    app.innerHTML = AR;
+
+    renderCategory();
+    renderProductImages();
+    goBack();
+    close();
 };
 
 const ar = {

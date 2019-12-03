@@ -1,10 +1,7 @@
 import Map from "../view/Navigation.html";
 import "../style/navigation.less";
 
-const render = function () {
-    const app = document.getElementById("app");
-    app.innerHTML = Map;
-
+const renderMap = function () {
     document.getElementById("search-button").addEventListener("click", () => {
         const category = document.getElementById("category").value.toLowerCase();
         document.getElementById("start-navigation-container").style.visibility = "visible";
@@ -27,22 +24,38 @@ const render = function () {
         default:
         }
     });
+};
 
-    document.getElementById("map-back").addEventListener("click", () => {
-        const shopId = location.hash.split("=")[1];
-        window.location.hash = "/shop/" + shopId;
-    });
-
-    document.getElementById("map-close").addEventListener("click", () => {
-        window.location.hash = "/";
-    });
-
+const renderNavigation = function () {
     document.getElementById("start-navigation").addEventListener("click", () => {
         const category = document.getElementById("category").value.toLowerCase();
         if(category.length > 0) {
             window.location.hash = "/ar?category=" + category;
         }
     });
+};
+
+const goBack = function () {
+    document.getElementById("map-back").addEventListener("click", () => {
+        const shopId = location.hash.split("=")[1];
+        window.location.hash = "/shop/" + shopId;
+    });
+};
+
+const close = function () {
+    document.getElementById("map-close").addEventListener("click", () => {
+        window.location.hash = "/";
+    });
+};
+
+const render = function () {
+    const app = document.getElementById("app");
+    app.innerHTML = Map;
+
+    renderMap();
+    goBack();
+    close();
+    renderNavigation();
 };
 
 const navigation = {
