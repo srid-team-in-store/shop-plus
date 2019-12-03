@@ -13,6 +13,8 @@ import navigation from "./js/navigation";
 import ar from "./js/ar";
 import scanDetail from "./js/scanDetail";
 import cart from "./js/cart";
+import searchPage from "./js/searchPage";
+import searchResult from "./js/searchResult";
 
 const app = document.getElementById("app");
 const router = new Navigo(null, true, "#");
@@ -62,6 +64,14 @@ router.on("/scan_detail", () => {
 
 router.on("/cart", () => {
     cart.render();
+}).resolve();
+
+router.on("/search", () => {
+    searchPage.render();
+}).resolve();
+
+router.on("/searchResult", () => {
+    searchResult.render();
 }).resolve();
 
 router.notFound(() => {

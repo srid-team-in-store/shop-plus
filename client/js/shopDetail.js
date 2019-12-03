@@ -59,6 +59,9 @@ const render = function () {
     document.getElementById("map-container").addEventListener("click", () => {
         window.location.hash = "/navigation?shopId=" + shopId;
     });
+    document.getElementById("search-icon").addEventListener("click", () => {
+        window.location.hash = "/search?shopId=" + shopId;
+    });
 };
 
 const shopDetail = {
